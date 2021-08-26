@@ -1,0 +1,31 @@
+.menu {
+	$self: &;
+	display: flex;
+
+	@include media('<=md') {
+		flex-flow: column nowrap;
+		align-items: flex-start;
+	}
+
+	&__link {
+		display: block;
+		padding: 8px 10px;
+		font-size: 15px;
+		line-height: 1.2;
+		text-decoration: none;
+		color: #707070;
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		&.active {
+			font-family: "SB", sans-serif;
+			color: #F0BE55;
+			background: url('#{$images-path}icons-sprite.svg#icon-half_bullet-view-orange') center bottom / 10px 5px no-repeat transparent;
+		}
+
+		@include media('<=md') {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,156 @@
+.welcome {
+	$self: &;
+	margin-bottom: 150px;
+	
+	@include media('<=xs') {
+		margin-bottom: 80px;
+	}
+
+	&__inner {
+		max-width: 1300px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding-left: 140px;
+		position: relative;
+
+		@include media('<=sm') {
+			display: block;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			height: 560px;
+			left: 40px;
+			top: -300px;
+			border-left: 3px solid #F0BE55;
+			z-index: 2;
+		}
+		
+		@include media('<=md') {
+			padding-left: 100px;
+
+			&::before {
+				left: 28px;
+			}
+		}
+		
+		@include media('<=xs') {
+			padding-left: 80px;
+
+			&::before {
+				height: 600px;
+				top: 0;
+			}
+		}
+		
+		@include media('<=xs') {
+			padding-left: 60px;
+		}
+	}
+
+	&__title {
+		width: 100%;
+		margin-bottom: 110px;
+		
+		span:nth-child(1) {
+			display: block;
+			color: #F0BE55;
+			font-family: "SSB", sans-serif;
+			font-size: 19px;
+			margin-bottom: 30px;
+		}
+		
+		span:nth-child(2) {
+			display: block;
+			font-family: "Times New Roman", serif;
+			line-height: 1.2;
+			font-size: 57px;
+			color: #444;
+			max-width: 780px;
+
+			&::after {
+				content: '.';
+				color: #F0BE55;
+			}
+	
+			@include media('<=xs') {
+				font-size: 48px;
+			}
+	
+			@include media('<=xxs') {
+				font-size: 40px;
+			}
+	
+			@include media('<=xxxs') {
+				font-size: 32px;
+				line-height: 1.4;
+			}
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 50px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__home {
+		box-sizing: border-box;
+		width: 48%;
+		
+		@include media('<=sm') {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__entry {
+		display: block;
+		font-size: 22px;
+		color: #6A6A6A;
+		line-height: 1.2;
+		text-decoration: none;
+		padding: 30px 20px 30px 90px;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-size: 47px 47px;
+		background-position: center left;
+		
+		@include media('<=xxxs') {
+			padding: 30px 20px 30px 70px;
+		}
+
+		&_key {
+			background-image: url('#{$images-path}ic-key.png');
+		}
+		
+		&_pallace {
+			background-image: url('#{$images-path}ic-pallace.png');
+		}
+		
+		&_rent {
+			background-image: url('#{$images-path}ic-rent.png');
+		}
+	}
+
+	&__info {
+		box-sizing: border-box;
+		width: 52%;
+		font-size: 18px;
+		line-height: 1.9;
+		color: #6A6A6A;
+		
+		@include media('<=sm') {
+			width: 100%;
+		}
+
+		p:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+}
