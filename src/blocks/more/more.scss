@@ -1,0 +1,24 @@
+.more {
+	$self: &;
+	text-decoration: none;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 14px;
+
+	&::after {
+		display: inline-block;
+		content: '';
+		width: 28px;
+		height: 8px;
+		background: url('#{$images-path}icons-sprite.svg#icon-arr-view-orange') center right / 138px 7px no-repeat transparent;
+		margin-left: 10px;
+	}
+
+	&_white {
+		color: #fff;
+	}
+
+	&_orange {
+		color: #F0BE55;
+	}
+}

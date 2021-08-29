@@ -1,0 +1,91 @@
+.spaces {
+	$self: &;
+	padding-top: 100px;
+	margin-bottom: 200px;
+
+	@include media('<=xxs') {
+		padding-top: 0;
+	}
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		background: url('./images/get__bg.svg') left top / 100% 60% no-repeat transparent;
+		padding: 0 0 0 140px;
+		
+		@include media('<=xxlg') {
+			padding: 0 0 0 45px;
+		}
+		
+		@include media('<=sm') {
+			padding: 0;
+			background-size:  100% 100%;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		margin-bottom: 70px;
+
+		&:nth-child(1) {
+			margin-top: 110px;
+			width: 45%;
+			
+			@include media('<=sm') {
+				width: 100%;
+				margin: 90px 0 90px 90px;
+			}
+			
+			@include media('<=xs') {
+				margin: 50px 0 50px 50px;
+			}
+			
+			@include media('<=xxxs') {
+				margin: 20px 0 20px 20px;
+			}
+		}
+		
+		&:nth-child(2) {
+			margin: -100px 45px 70px 90px;
+			width: calc(55% - 135px);
+			
+			@include media('<=lg') {
+				margin: -100px 45px 70px 45px;
+				width: calc(55% - 90px);
+			}
+			
+			@include media('<=sm') {
+				width: 100%;
+				margin: 0 90px 90px 0;
+			}
+			
+			@include media('<=xs') {
+				margin: 0 50px 50px 0;
+			}
+			
+			@include media('<=xxxs') {
+				margin: 0 20px 20px 0;
+			}
+		}
+		
+		&:nth-child(3) {
+			width: 100%;
+			
+			@include media('<=sm') {
+				margin: 0 0 90px 0;
+			}
+			
+			@include media('<=xs') {
+				margin: 0;
+			}
+			
+			@include media('<=xxs') {
+				margin: 0 0 0 50px;
+			}
+			
+			@include media('<=xxxs') {
+				margin: 0 0 0 20px;
+			}
+		}
+	}
+}
