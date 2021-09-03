@@ -1,7 +1,7 @@
 .spaces {
 	$self: &;
 	padding-top: 100px;
-	margin-bottom: 200px;
+	margin-bottom: 130px;
 
 	@include media('<=xxs') {
 		padding-top: 0;

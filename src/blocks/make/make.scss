@@ -1,0 +1,77 @@
+.make {
+	$self: &;
+	margin-bottom: 130px;
+
+	&__inner {
+		max-width: 1440px;
+		display: flex;
+		align-items: center;
+
+		@include media('<=lg') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__title {
+		font-family: "Times New Roman", serif;
+		line-height: 1.2;
+		font-size: 50px;
+		color: #444;
+		max-width: 430px;
+		min-width: 320px;
+		margin: 0 20px 40px;
+
+		&::after {
+			content: ".";
+			color: #F0BE55;
+		}
+
+		@include media('<=xs') {
+			min-width: 0;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 44px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 38px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		margin: 0 20px 40px;
+		max-width: 460px;
+		color: #6A6A6A;
+		font-size: 22px;
+		line-height: 1.8;
+		
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
+	}
+
+	&__button {
+		display: block;
+		box-sizing: border-box;
+		text-decoration: none;
+		color: #3A3A3A;
+		background-color: #F0BE55;
+		box-shadow: 0 0 17px #F0BE55;
+		white-space: nowrap;
+		padding: 22px;
+		text-transform: uppercase;
+		font-family: "SSB", sans-serif;
+		font-size: 16px;
+		line-height: 1.1;
+		text-align: center;
+		width: 100%;
+		max-width: 200px;
+		margin: 0 0 20px auto;
+		
+		@include media('<=lg') {
+			margin: 0 20px;
+		}
+	}
+}

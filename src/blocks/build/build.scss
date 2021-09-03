@@ -1,0 +1,158 @@
+.build {
+	$self: &;
+	margin-bottom: 300px;
+	
+	@include media('<=md') {
+		margin-bottom: 200px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 100px;
+	}
+
+	&__inner {
+		max-width: 1400px !important;
+	}
+
+	&__title {
+		box-sizing: border-box;
+		font-family: "Times New Roman", serif;
+		line-height: 1.2;
+		font-size: 53px;
+		color: #333;
+		margin-bottom: 60px;
+		padding-left: 10px;
+		max-width: 600px;
+
+		&::after {
+			content: ".";
+			color: #F0BE55;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 44px;
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 38px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	&__item {
+		margin: 0 10px 40px;
+
+		&:nth-child(1) {
+			padding-top: 120px;
+			width: calc(100%/24*8 - 20px);
+			
+			@include media('<=md') {
+				order: 3;
+				padding-top: 0;
+				width: calc(100%/24*13 - 20px);
+				margin: 0 auto;
+			}
+			
+			@include media('<=sm') {
+				order: 3;
+				width: calc(100%/24*16 - 20px);
+				margin: 0 auto 40px 0;
+			}
+			
+			@include media('<=xxs') {
+				width: calc(100%/24*24 - 20px);
+				margin: 0 10px 40px;
+			}
+		}
+		
+		&:nth-child(2) {
+			width: calc(100%/24*7 - 20px);
+			
+			@include media('<=md') {
+				order: 2;
+				width: calc(100%/24*11 - 20px);
+			}
+			
+			@include media('<=sm') {
+				order: 3;
+				width: calc(100%/24*14 - 20px);
+				margin: 0 0 0 auto;
+			}
+			
+			@include media('<=xxs') {
+				width: calc(100%/24*24 - 20px);
+				margin: 0 10px 40px;
+			}
+		}
+		
+		&:nth-child(3) {
+			width: calc(100%/24*9 - 20px);
+
+			@include media('<=md') {
+				order: 1;
+				width: calc(100%/24*13 - 20px);
+			}
+
+			@include media('<=sm') {
+				width: calc(100%/24*24 - 20px);
+				display: flex;
+
+				#{$self}__image {
+					min-width: 55%;
+				}
+
+				#{$self}__item-top {
+					padding: 0 20px 0 0;
+
+					p { font-size: 17px; }
+				}
+			}
+
+			@include media('<=xs') {
+				#{$self}__image {
+					min-width: 50%;
+				}
+
+				#{$self}__item-top {
+					p { font-size: 16px; }
+				}
+			
+				@include media('<=xxs') {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__image {
+		> img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__item-top {
+		padding-left: 60px;
+		margin-bottom: 80px;
+
+		p {
+			font-family: "SSB", sans-serif;
+			font-size: 18px;
+			line-height: 1.7;
+			color: #8E8E8E;
+			margin-bottom: 45px;
+		}
+	}
+
+	&__link {
+
+	}
+}

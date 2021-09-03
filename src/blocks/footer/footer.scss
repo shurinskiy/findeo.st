@@ -53,9 +53,9 @@
 		border: 1px solid #9E9B9E;
 		display: flex;
 		padding: 6px;
-			
-		@include media('<=sm') {
-
+		
+		@include media('<=xxs') {
+			min-width: 0;
 		}
 
 		input[type="text"] {
